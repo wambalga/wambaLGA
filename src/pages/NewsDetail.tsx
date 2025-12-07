@@ -66,7 +66,7 @@ const NewsDetail = () => {
           <Link to="/news" className="text-secondary hover:text-secondary/60 flex items-center gap-2 mb-6 w-fit transition-colors">
             <ArrowLeft size={20} /> Back to News
           </Link>
-          <h1 className="text-4xl md:text-3xl font-display font-bold text-secondary mb-4">
+          <h1 className="text-2xl md:text-3xl font-display font-bold text-secondary mb-4">
             {post.title}
           </h1>
        
