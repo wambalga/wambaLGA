@@ -21,7 +21,6 @@ function App() {
         <Route path="/news" element={<News />} />
         
         {/* Dynamic Route for single post (We will build this later) */}
-        <Route path="/news/:slug" element={<div className="p-20">Single Article Coming Soon...</div>} />
         <Route path="/about" element={<About />} />
         <Route path="/council" element={<div className="p-10">Council Page Coming Soon</div>} />
         <Route path="/contact" element={<Contact />} />
