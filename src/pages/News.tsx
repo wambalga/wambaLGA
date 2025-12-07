@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Folder, MessageCircle, User } from 'lucide-react'; // Icons
+import { Calendar, Folder, MessageCircle } from 'lucide-react'; // Icons
 import { client, urlFor } from '../lib/sanity';
 import type { Post } from '../types';
 import NewsSidebar from '../components/NewsSidebar'; // Import Sidebar
