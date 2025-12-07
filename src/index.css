@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+/* Define the Global Theme */
+@theme {
+  /* -- COLORS -- */
+  /* Primary: Official Green (Buttons, Links, Highlights) */
+  --color-primary: #008751; 
+  --color-primary-dark: #006b3f;
+  --color-primary-light: #e6f3ed;
+
+  /* Secondary: Deep Navy/Black (Footer, Headings) */
+  --color-secondary: #051A53;
+  
+  /* Accent: Gold/Yellow (Call to Actions, borders) */
+  --color-accent: #fbbf24;
+
+  /* Neutrals: Backgrounds */
+  --color-surface: #ffffff;
+  --color-background: #f7fafc;
+
+  /* -- FONTS -- */
+  /* 'font-sans' will automatically update the default font */
+  --font-sans: "Inter", sans-serif;
+  /* 'font-display' is for your big headings */
+  --font-display: "Roboto", serif;
+  
+  /* -- SPACING (Optional: Standardize your container) -- */
+  --width-container: 1280px;
+}
+
+/* Base Styles (Reset) */
+@layer base {
+  body {
+    @apply bg-background text-secondary antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold text-secondary;
+  }
+}
