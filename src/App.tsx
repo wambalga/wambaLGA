@@ -8,10 +8,12 @@ import News from './pages/News';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NewsDetail from './pages/NewsDetail';
+import ScrollToTop from './components/ui/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
