@@ -7,6 +7,7 @@ import Council from './pages/Council';
 import News from './pages/News';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import NewsDetail from './pages/NewsDetail';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/council" element={<div className="p-10">Council Page Coming Soon</div>} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/news/:slug" element={<NewsDetail />} />
       </Routes>
       <Footer />
     </BrowserRouter>
