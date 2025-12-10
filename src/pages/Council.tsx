@@ -46,28 +46,28 @@ const Council = () => {
         
         {/* 1. Executive Arm */}
         {executive.length > 0 && (
-          <Section title="Executive Arm" subtitle="JOS SOUTH">
+          <Section title="Executive Arm" subtitle="WAMBA LGA">
             {executive.map((person) => <PersonCard key={person._id} person={person} />)}
           </Section>
         )}
 
         {/* 2. Legislative Arm */}
         {legislative.length > 0 && (
-          <Section title="Legislative Arm" subtitle="JOS SOUTH">
+          <Section title="Legislative Arm" subtitle="WAMBA LGA">
             {legislative.map((person) => <PersonCard key={person._id} person={person} />)}
           </Section>
         )}
 
         {/* 3. The Management */}
         {management.length > 0 && (
-          <Section title="The Management" subtitle="JOS SOUTH">
+          <Section title="The Management" subtitle="WAMBA LGA">
             {management.map((person) => <PersonCard key={person._id} person={person} />)}
           </Section>
         )}
 
         {/* 4. Traditional Rulers */}
         {traditional.length > 0 && (
-          <Section title="Traditional Rulers" subtitle="JOS SOUTH">
+          <Section title="Traditional Rulers" subtitle="WAMBA LGA">
             {traditional.map((person) => <PersonCard key={person._id} person={person} />)}
           </Section>
         )}
