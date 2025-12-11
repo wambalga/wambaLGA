@@ -16,7 +16,7 @@ const Hero = () => {
 <div className="h-full px-4 pb-12 md:px-0 md:pb-0">
            <div className="w-full h-full relative overflow-hidden rounded-xl md:rounded-none md:[clip-path:polygon(15%_0,100%_0,100%_100%,0%_100%)]">
             <img 
-                src="/images/hero-banner.jpeg" 
+                src="/images/banner.jpeg" 
                 alt="Wamba Landscape" 
                 className="w-full h-full object-cover"
             />
