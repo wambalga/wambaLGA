@@ -31,16 +31,16 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
       </div>
 
-      {/* 2. Details Area (Gray Background) */}
-      <div className="bg-green-50 p-6 grow text-secondary">
+      {/* 2. Details Area Background) */}
+      <div className="bg-secondary p-6 grow text-white">
         <ul className="space-y-4">
           
           {/* Title Row */}
           <li className="flex items-start gap-3">
-            <CheckCircle2 className="mt-1 shrink-0 text-secondary" size={18} />
+            <CheckCircle2 className="mt-1 shrink-0 text-white" size={18} />
             <div>
-              <span className="font-bold block text-sm">Project :</span>
-              <span className="text-sm font-semibold leading-tight block mt-0.5">
+              <span className="font-bold block text-sm">Project : </span>
+              <span className="text-md font-semibold leading-tight block mt-0.5">
                 {project.title}
               </span>
             </div>
@@ -48,18 +48,18 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
           {/* Location Row */}
           <li className="flex items-start gap-3">
-            <CheckCircle2 className="mt-1 shrink-0 text-secondary" size={18} />
+            <CheckCircle2 className="mt-1 shrink-0 text-white" size={18} />
             <div>
-              <span className="font-bold block text-sm">Location :</span>
+              <span className="font-bold block text-sm">Location : {project.location}</span>
               <span className="text-sm font-medium block mt-0.5">
-                {project.location}
+                
               </span>
             </div>
           </li>
 
           {/* Status Row */}
           <li className="flex items-start gap-3">
-            <CheckCircle2 className="mt-1 shrink-0 text-secondary" size={18} />
+            <CheckCircle2 className="mt-1 shrink-0 text-white" size={18} />
             <div>
               <span className="font-bold block text-sm">Progress :</span>
               <span className="text-sm font-medium block mt-0.5">

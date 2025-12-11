@@ -37,8 +37,8 @@ const Council = () => {
     <div className="bg-gray-50 min-h-screen pb-20">
       
       {/* Page Header */}
-      <div className="bg-[#051025] text-white py-16 text-center">
-        <h1 className="font-display font-bold text-4xl">Council Personnel</h1>
+      <div className="bg-secondary text-white py-16 text-center">
+        <h1 className="font-display text-white font-bold text-4xl">Council Personnel</h1>
         <p className="mt-4 text-gray-300">Meet the Administration, Legislature, and Traditional Leaders</p>
       </div>
 

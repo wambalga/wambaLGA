@@ -47,8 +47,8 @@ const News = () => {
     <div className="bg-white min-h-screen pb-20">
       
       {/* 1. Page Header */}
-      <div className="bg-[#051025] text-white py-16 text-center">
-        <h1 className="font-display font-bold text-4xl">News & Updates</h1>
+      <div className="bg-secondary text-white py-16 text-center">
+        <h1 className="font-display text-white font-bold text-4xl">News & Updates</h1>
         <p className="mt-2 text-gray-300">Stay informed about Wamba LGA developments</p>
       </div>
 
