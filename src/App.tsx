@@ -9,10 +9,13 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import NewsDetail from './pages/NewsDetail';
 import ScrollToTop from './components/ui/ScrollToTop';
+import Preloader from './components/ui/Preloader';
 
 function App() {
   return (
     <BrowserRouter>
+      <Preloader />
+
       <ScrollToTop />
       <Navbar />
       <Routes>

@@ -7,20 +7,38 @@ import DocumentSection from '../components/DocumentSection';
 import TestimonialSection from '../components/TestimonialSection';
 import GallerySection from '../components/GallerySection';
 import Newsletter from '../components/Newsletter';
+import FadeIn from '../components/ui/FadeIn';
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <FadeIn>
       <Hero />
+      </FadeIn>
+      <FadeIn delay={0.2}>
       <DepartmentSection />
+      </FadeIn>
+      <FadeIn>
       <ChairmanMessage />
+      </FadeIn>
+      <FadeIn>
       <ProjectSection />
-      {/* Add the News Section here */}
+      </FadeIn>
+      <FadeIn>
       <NewsSection />
+      </FadeIn>
+      <FadeIn>
       <DocumentSection />
+      </FadeIn>
+      <FadeIn>
       <TestimonialSection />
+      </FadeIn>
+      <FadeIn>
       <GallerySection />
+      </FadeIn>
+      <FadeIn>
       <Newsletter />
+      </FadeIn>
     </div>
   );
 };

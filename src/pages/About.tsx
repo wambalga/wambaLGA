@@ -4,6 +4,7 @@ import { PortableText } from '@portabletext/react';
 import { client, urlFor } from '../lib/sanity';
 import type { AboutPageData } from '../types';
 import TestimonialSection from '../components/TestimonialSection';
+import FadeIn from '../components/ui/FadeIn';
 
 const About = () => {
   const [data, setData] = useState<AboutPageData | null>(null);
@@ -21,6 +22,7 @@ const About = () => {
     <div className="min-h-screen mx-auto pb-20">
       
       {/* --- SECTION 1: INTRO (Hero) --- */}
+      <FadeIn>
       <section className="w-11/12 md:w-11/12 mx-auto sm:px-6 lg:px-8 py-10 md:py-20">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           
@@ -78,9 +80,11 @@ const About = () => {
           </div>
         </div>
       </section>
+      </FadeIn>
 
 
       {/* --- SECTION 1b: HISTORICAL BACKGROUND --- */}
+      <FadeIn delay={0.2}>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-10">
         <div className="">
           {/* Subtitle with Green Line */}
@@ -103,9 +107,11 @@ const About = () => {
           </div>
         </div>
       </section>
+      </FadeIn>
 
 
       {/* --- SECTION 2: THE PEOPLE --- */}
+      <FadeIn delay={0.2}>
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
@@ -140,9 +146,11 @@ const About = () => {
           </div>
         </div>
       </section>
+      </FadeIn>
 
 
       {/* --- SECTION 3: CULTURE & OCCUPATION (Grid) --- */}
+      <FadeIn>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 bg-green-50 rounded-lg">
           
@@ -188,9 +196,11 @@ const About = () => {
 
         </div>
       </section>
+      </FadeIn>
 
 
       {/* --- SECTION 4: TRADITIONAL RULERS --- */}
+      <FadeIn delay={0.2}>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-gray-100">
         <div className="text-center mb-16">
           <span className="text-primary font-bold tracking-widest text-sm uppercase mb-2 block">
@@ -229,8 +239,12 @@ const About = () => {
           ))}
         </div>
       </section>
+      </FadeIn>
+
       {/* --- TESTIMONIAL SECTION --- */}
+      <FadeIn delay={0.2}>
       <TestimonialSection />
+      </FadeIn>
     </div>
   );
 };

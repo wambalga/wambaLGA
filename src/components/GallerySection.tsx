@@ -30,10 +30,11 @@ const GallerySection = () => {
       <span className="text-primary font-bold tracking-widest text-sm uppercase">
             From the Wamba Gallery
           </span>
+          <div className="w-24 h-1 bg-primary mx-auto mt-2 rounded-full"></div>
         <h2 className="text-center font-display font-bold text-3xl sm:text-4xl text-secondary">
           Explore our beautiful city
         </h2>
-        <div className="w-24 h-1 bg-primary mx-auto mt-2 rounded-full"></div>
+        
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-5 gap-2">
           {images.map((item) => {
             // Check if this specific card is active
@@ -57,12 +58,12 @@ const GallerySection = () => {
                     - isActive ? 'opacity-100' : '' (Works on Mobile Tap)
                 */}
                 <div 
-                  className={`absolute inset-0 bg-primary/90 p-6 flex flex-col justify-end text-white transition-opacity duration-300 
+                  className={`absolute inset-0 bg-primary/90 p-6 flex flex-col justify-center text-white transition-opacity duration-300 
                     opacity-0 group-hover:opacity-100 
                     ${isActive ? '!opacity-100' : ''} 
                   `}
                 >
-                  <h3 className="font-bold text-xl mb-2">{item.title}</h3>
+                  <h3 className="font-bold text-xl border-2 mb-2">{item.title}</h3>
                   {item.details && (
                     <p className="text-sm leading-relaxed text-white/90">
                       {item.details}

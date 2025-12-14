@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { client } from '../lib/sanity';
+import FadeIn from '../components/ui/FadeIn';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +11,6 @@ const Contact = () => {
     message: ''
   });
   
-  // FIXED: Corrected the setter name here
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -43,8 +43,9 @@ const Contact = () => {
     <div className="bg-white min-h-screen pb-20">
       
       {/* Header / Hero Section */}
-      <div className="bg-[#051025] text-white py-16 text-center">
-        <h1 className="font-display font-bold text-4xl">Contact Us</h1>
+      <FadeIn>
+      <div className="bg-secondary text-white py-16 text-center">
+        <h1 className="font-display text-white font-bold text-4xl">Contact Us</h1>
         <p className="mt-2 text-gray-300">We'd love to hear from you</p>
       </div>
 
@@ -54,11 +55,12 @@ const Contact = () => {
           {/* LEFT COLUMN: Contact Info */}
           <div>
             <div className="mb-8">
-              <div className="w-10 h-1 bg-primary mb-4"></div>
+              
               <span className="text-primary font-bold tracking-widest text-sm uppercase">
                 Contact With Us
               </span>
-              <h2 className="mt-2 font-display font-bold text-4xl text-secondary leading-tight">
+              <div className="w-40 h-1 bg-primary mt-2"></div>
+              <h2 className="mt-7 font-display font-bold text-4xl text-secondary leading-tight">
                 Feel free to get in touch with us
               </h2>
               <p className="mt-6 text-gray-600 leading-relaxed">
@@ -76,7 +78,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-gray-500 text-sm font-medium mb-1">Have any question?</h3>
-                  <p className="font-display font-bold text-xl text-secondary">+234 (0) 903 193 2411</p>
+                  <p className="font-display font-bold text-md text-secondary">+234 (0) 903 193 2411</p>
                 </div>
               </div>
 
@@ -87,7 +89,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-gray-500 text-sm font-medium mb-1">Write email</h3>
-                  <p className="font-display font-bold text-xl text-secondary break-all">info@wambalga.ng</p>
+                  <p className="font-display font-bold text-md text-secondary break-all">info@wambalga.ng</p>
                 </div>
               </div>
 
@@ -98,7 +100,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-gray-500 text-sm font-medium mb-1">Visit anytime</h3>
-                  <p className="font-display font-bold text-xl text-secondary">
+                  <p className="font-display font-bold text-md text-secondary">
                     Wamba LGA Headquarters,<br />
                     Nasarawa State
                   </p>
@@ -198,6 +200,7 @@ const Contact = () => {
 
         </div>
       </div>
+      </FadeIn>
     </div>
   );
 };

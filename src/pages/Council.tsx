@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { client, urlFor } from '../lib/sanity';
 import type { Staff } from '../types';
+import FadeIn from '../components/ui/FadeIn';
 
 const Council = () => {
   const [staff, setStaff] = useState<Staff[]>([]);
@@ -43,34 +44,41 @@ const Council = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 mt-16">
-        
+        <FadeIn>
         {/* 1. Executive Arm */}
         {executive.length > 0 && (
           <Section title="Executive Arm" subtitle="WAMBA LGA">
             {executive.map((person) => <PersonCard key={person._id} person={person} />)}
           </Section>
         )}
+      </FadeIn>
 
         {/* 2. Legislative Arm */}
+        <FadeIn delay={0.2}>
         {legislative.length > 0 && (
           <Section title="Legislative Arm" subtitle="WAMBA LGA">
             {legislative.map((person) => <PersonCard key={person._id} person={person} />)}
           </Section>
         )}
+        </FadeIn>
 
         {/* 3. The Management */}
+        <FadeIn>
         {management.length > 0 && (
           <Section title="The Management" subtitle="WAMBA LGA">
             {management.map((person) => <PersonCard key={person._id} person={person} />)}
           </Section>
         )}
+        </FadeIn>
 
         {/* 4. Traditional Rulers */}
+        <FadeIn>
         {traditional.length > 0 && (
           <Section title="Traditional Rulers" subtitle="WAMBA LGA">
             {traditional.map((person) => <PersonCard key={person._id} person={person} />)}
           </Section>
         )}
+        </FadeIn>
 
       </div>
     </div>
@@ -98,7 +106,7 @@ const Section = ({ title, subtitle, children }: { title: string, subtitle?: stri
   </div>
 );
 
-// New Card Design (Matches your screenshots)
+// New Card Design
 const PersonCard = ({ person }: { person: Staff }) => (
   <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col items-center border border-gray-100">
     
