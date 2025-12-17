@@ -42,8 +42,8 @@ const Preloader = () => {
               animate={{ scale: 5 }} // Zoom level (30x makes it huge, filling screen)
               transition={{ 
                 delay: 1,      // Wait 1 second before zooming
-                duration: 1.5, // Take 1.8 seconds to zoom
-                ease: [0.76, 0, 0.24, 1] // Custom bezier for "smooth start, fast middle, smooth end"
+                duration: 4.5, // Take 1.8 seconds to zoom
+                ease: [0.25, 0, 0.24, 1] // Custom bezier for "smooth start, fast middle, smooth end"
               }}
               style={{
                 // CRITICAL SETTING: THE "ZOOM TARGET"
