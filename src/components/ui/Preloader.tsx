@@ -5,18 +5,18 @@ const Preloader = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // 1. Lock the body scroll so user can't scroll while loading
+    // 1. Lock scroll
     document.body.style.overflow = 'hidden';
 
-    // 2. Timer to end the animation
-    // Timeline: 
-    // 0s - 1s: View Map
-    // 1s - 2.5s: Zoom In
-    // 2.5s: Fade Out
+    // 2. Timer: 5.5 seconds total life
+    // Timeline:
+    // 0.5s: Initial Pause
+    // 4.0s: Smooth Zoom
+    // 1.0s: Hold on target
     const timer = setTimeout(() => {
       setIsVisible(false);
-      document.body.style.overflow = 'unset'; // Unlock scroll
-    }, 2800);
+      document.body.style.overflow = 'unset';
+    }, 5500);
 
     return () => {
       clearTimeout(timer);
@@ -29,27 +29,27 @@ const Preloader = () => {
       {isVisible && (
         <motion.div
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-white"
-          exit={{ opacity: 0 }} // Fade out the white screen
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
             <motion.img
-              src="/images/nasarawa-map.svg" 
+              src="/images/nasarawa-map.jpeg" 
               alt="Loading Map"
               className="w-[80%] md:w-[40%] h-auto object-contain"
               
               initial={{ scale: 1 }}
-              animate={{ scale: 5 }} // Zoom level (30x makes it huge, filling screen)
+              animate={{ scale: 5 }} // Increased scale to ensure we really enter the map
               transition={{ 
-                delay: 1,      // Wait 1 second before zooming
-                duration: 4.5, // Take 1.8 seconds to zoom
-                ease: [0.25, 0, 0.24, 1] // Custom bezier for "smooth start, fast middle, smooth end"
+                delay: 0.5,     // Slight pause at start
+                duration: 4,    // Long, slow duration for smoothness
+                ease: [0.42, 0, 0.58, 1] // "easeInOut" curve for smooth acceleration & deceleration
               }}
               style={{
-                // CRITICAL SETTING: THE "ZOOM TARGET"
-                // You must adjust these % values to match where Wamba is on your specific SVG.
-                // 50% 50% is dead center.
-                // If Wamba is top-right, try "70% 30%"
+                // Optimization: tells browser to prepare for heavy movement
+                willChange: "transform",
+                
+                // Keep your specific target coordinates
                 transformOrigin: "67% 20%" 
               }}
             />
